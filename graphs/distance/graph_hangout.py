@@ -1,3 +1,53 @@
+"""
+Three friends want to meet. They live in nodes in a connected, undirected graph.
+
+You are given the adjacency list, graph, and the nodes where they start, node1, node2, and node3.
+
+Return the minimum number of edges they need to traverse in total between the three to meet at any node in the graph.
+
+For example, for this graph:
+Graph Hangout
+
+If the three friends start at the nodes labeled 1, 2 and 3, they can each get to the middle node by traversing 3 edges. The next closest meeting point is at one of the starting nodes, where the other two friends have to traverse 5 edges each. Thus, the answer is 9.
+
+Example 1:
+graph = [
+    [1, 4],   # Node 0
+    [0, 2],   # Node 1
+    [1, 3],   # Node 2
+    [2, 4],   # Node 3
+    [0, 3]    # Node 4
+]
+node1 = 0
+node2 = 2
+node3 = 4
+
+Output: 3
+They can meet at node 0 or 4 in combined 3 steps
+
+Example 2:
+graph = [
+    [1, 2, 3],  # Node 0
+    [0, 2, 3],  # Node 1
+    [0, 1, 3],  # Node 2
+    [0, 1, 2]   # Node 3
+]
+node1 = 0
+node2 = 1
+node3 = 2
+
+Output: 2
+In a complete graph, they can meet at any node
+
+Constraints:
+
+    graph.length <= 10^4
+    graph[i].length < 10^4
+    0 <= graph[i][j] < graph.length
+    0 <= node1, node2, node3 < graph.length
+    The graph is well-formed, with no parallel edges or self-loops
+"""
+
 from collections import deque
 import math
 
