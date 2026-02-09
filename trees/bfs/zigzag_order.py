@@ -1,5 +1,27 @@
 from collections import deque, defaultdict
 
+# # Zig-Zag Order
+
+# Given a binary tree, return the values of all its nodes in _zig-zag order_. This is similar to a level-order traversal but alternating the direction of the nodes at each level. Nodes at even depth are ordered left to right, and nodes at odd depth are ordered right to left.
+
+# Example:
+
+# Input:
+#     1
+#    / \
+#   2   3
+#  / \   \
+# 4   5   6
+
+# Output: [1, 3, 2, 4, 5, 6]
+
+# https://iio-beyond-ctci-images.s3.us-east-1.amazonaws.com/trees_fig19.png
+
+# Constraints:
+
+# - The number of nodes is at most `10^5`
+# - The values at each node are between `0` and `10^9`
+
 
 class Node:
     def __init__(self, val, left=None, right=None):
